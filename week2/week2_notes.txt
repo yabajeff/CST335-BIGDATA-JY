@@ -1,0 +1,96 @@
+Week 2 Notes 
+Dr. Heather Wegwerth
+CST 335 100 Data Management & Big Data Systems
+Jeffrey Yabandith
+
+Here are the EXPLAIN QUERY PLAN outputs I used out of the terminal,
+also with the timings I ran with .timer on.
+--------------------------------------------------
+BEFORE ADDING THE INDEXES
+Baseline 2, all the loans for one singular student:
+  SELECT * FROM Loan WHERE StudentID = 103;
+
+  QUERY PLAN
+  `--SCAN Loan
+
+  SCAN means that SQLite had opened the Loan table and read every row from top
+  to bottom, checking each one to see if StudentID was 103. There are
+  120 rows and but 13 of them belong to student 103, so it looked at 107 rows
+  for no reason. At the size of 120 rows this does not matter. If the desk had
+  120,000 loans it probably would matter more.
+--------------------------------------------------
+AFTER RUNNING week2_indexes.sql
+Optimized 2, the same question/query:
+  SELECT l.LoanID, i.ItemName, l.CheckoutDate, l.ExpectedReturnDate,
+         l.ActualReturnDate
+  FROM Loan AS l JOIN Item AS i ON l.ItemID = i.ItemID
+  WHERE l.StudentID = 103;
+
+  QUERY PLAN
+  |--SEARCH l USING INDEX idx_loan_student (StudentID=?)
+  `--SEARCH i USING INTEGER PRIMARY KEY (rowid=?)
+
+  The SCAN turned into SEARCH. Instead of it reading the table front to back,
+  SQLite used the index to instead jump straight into student 103's rows.
+
+  The second line was already working fine before. That is the join to Item,
+  and it is fast because of that ItemID is a primary key, which SQLite will index
+  on its own.
+  --------------------------------------------------
+TIMINGS  with .timer on 
+Baseline 1   Real Run Time: 0.593654s 
+Optimized 1  Real Run Time: 0.019884s 
+Baseline 2   Real Run Time: 0.014938s 
+Optimized 2  Real Run Time: 0.016880s 
+Baseline 3   Real Run Time: 0.016154s 
+Optimized 3  Real Run Time: 0.006094s
+--------------------------------------------------
+What I noticed: at 120 rows the times are so small that they mostly
+show numbers between 0.014000 and 0.019000 change very little every on run. This doesn't mean the
+changes did nothing, but it does mean that the 120 rows mignt not be enough data to measure a significant 
+difference on my laptop. 
+The query plan is the better evidence at this
+current environment and size, and the change from 
+SCAN to SEARCH will show up every time.
+I also noticed that the Optimized 2 ran slightly slower than baseline 2 everytime I tested it.
+ I think this is due to two reasons. One being that the optimized version has an added
+join statement to Item in order to get the item name. This is something
+that the baseline never had incorporated so it is in turn doing more work. 
+Two would be that because it is only running with 120 rows of data, the measured time is usually just the console 
+printing the results, and not the database itself.
+This still points to the query plan being the better evidence in this case. 
+
+--------------------------------------------------
+DUCKDB - CSV VS PARQUET
+
+Query ran against both of the files:
+  SELECT ItemCategory, COUNT(*) AS loan_count
+  FROM 'data/loan.csv'       (then again with data/loan.parquet)
+  GROUP BY ItemCategory
+  ORDER BY ItemCategory;
+
+Outcome from the same files:
+  camera       15
+  laptop       41
+  microphone   23
+  projector    27
+  tablet       14
+
+  CSV time:      0.017s
+  Parquet time:  0.008s
+
+  CSV file size:     10,205 bytes or 10.2 KB
+  Parquet file size:  4,896 bytes or 4.8 KB
+
+The plans were different at the bottom:
+  CSV     -> READ_CSV_AUTO
+  Parquet -> PARQUET_SCAN
+
+What I take from this: 
+Both of these files are holding the same 120 rows and gave the same exact five count
+on the rows, so a big question is, what changed and why? The Parquet query was running in about half of
+the time that the CSV had taken and the file was also less than half of the size as well. This is because CSV
+is storing each line of text together as a whole row, searching through it all to find ItemCategory. 
+The query only searches for ItemCategory by itself since it stores all of them columns together. 
+This is aslso the reason why It is smaller, since a single column of data that has repeating 
+data will be easily compressable. 
