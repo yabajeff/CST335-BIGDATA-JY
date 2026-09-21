@@ -1,0 +1,121 @@
+LoanID,StudentID,FirstName,LastName,ItemID,ItemName,ItemCategory,CheckoutDate,ExpectedReturnDate,ActualReturnDate
+1,103,Joe,Johnson,8,Epson PowerLite Projector,projector,2025-09-01,2025-09-22,2025-09-24
+2,102,Jane,Doe,1,Dell Latitude Laptop,laptop,2025-09-03,2025-09-10,2025-09-09
+3,108,Diego,Ramirez,6,Shure MV7 Microphone,microphone,2025-09-06,2025-09-13,2025-09-14
+4,105,Grace,Pham,8,Epson PowerLite Projector,projector,2025-09-08,2025-09-15,2025-09-12
+5,102,Jane,Doe,4,Canon EOS R50 Camera,camera,2025-09-08,2025-09-29,2025-10-01
+6,104,Maria,Garcia,1,Dell Latitude Laptop,laptop,2025-09-09,2025-09-30,2025-09-23
+7,106,Tyler,Brooks,9,BenQ TH685 Projector,projector,2025-09-16,2025-09-23,2025-09-26
+8,103,Joe,Johnson,8,Epson PowerLite Projector,projector,2025-09-16,2025-09-23,2025-09-21
+9,105,Grace,Pham,4,Canon EOS R50 Camera,camera,2025-09-19,2025-10-10,2025-09-29
+10,104,Maria,Garcia,3,Lenovo ThinkPad Laptop,laptop,2025-09-22,2025-10-13,2025-10-01
+11,107,Nia,Owens,9,BenQ TH685 Projector,projector,2025-09-27,2025-10-18,2025-10-02
+12,107,Nia,Owens,1,Dell Latitude Laptop,laptop,2025-10-01,2025-10-08,2025-10-05
+13,101,John,Smith,10,iPad Air Tablet,tablet,2025-10-01,2025-10-15,2025-10-11
+14,107,Nia,Owens,6,Shure MV7 Microphone,microphone,2025-10-03,2025-10-17,2025-10-21
+15,105,Grace,Pham,10,iPad Air Tablet,tablet,2025-10-05,2025-10-12,2025-10-09
+16,103,Joe,Johnson,4,Canon EOS R50 Camera,camera,2025-10-06,2025-10-20,2025-10-11
+17,105,Grace,Pham,4,Canon EOS R50 Camera,camera,2025-10-08,2025-10-15,2025-10-11
+18,102,Jane,Doe,6,Shure MV7 Microphone,microphone,2025-10-13,2025-10-27,2025-10-30
+19,104,Maria,Garcia,1,Dell Latitude Laptop,laptop,2025-10-14,2025-10-21,2025-10-19
+20,105,Grace,Pham,7,Rode Wireless GO II,microphone,2025-10-15,2025-11-05,2025-11-05
+21,103,Joe,Johnson,2,MacBook Air Laptop,laptop,2025-10-17,2025-10-31,2025-10-24
+22,108,Diego,Ramirez,7,Rode Wireless GO II,microphone,2025-10-19,2025-11-09,2025-11-09
+23,103,Joe,Johnson,1,Dell Latitude Laptop,laptop,2025-10-22,2025-10-29,2025-11-01
+24,106,Tyler,Brooks,6,Shure MV7 Microphone,microphone,2025-10-26,2025-11-02,2025-10-29
+25,102,Jane,Doe,9,BenQ TH685 Projector,projector,2025-10-26,2025-11-02,2025-11-02
+26,106,Tyler,Brooks,3,Lenovo ThinkPad Laptop,laptop,2025-10-31,2025-11-07,2025-11-04
+27,108,Diego,Ramirez,10,iPad Air Tablet,tablet,2025-11-08,2025-11-22,2025-11-12
+28,103,Joe,Johnson,7,Rode Wireless GO II,microphone,2025-11-12,2025-11-26,2025-11-17
+29,108,Diego,Ramirez,2,MacBook Air Laptop,laptop,2025-11-20,2025-12-04,2025-11-23
+30,108,Diego,Ramirez,1,Dell Latitude Laptop,laptop,2025-12-04,2025-12-25,2025-12-28
+31,107,Nia,Owens,8,Epson PowerLite Projector,projector,2025-12-05,2025-12-26,2025-12-08
+32,102,Jane,Doe,2,MacBook Air Laptop,laptop,2025-12-07,2025-12-14,2025-12-11
+33,105,Grace,Pham,8,Epson PowerLite Projector,projector,2025-12-07,2025-12-21,2025-12-22
+34,108,Diego,Ramirez,9,BenQ TH685 Projector,projector,2025-12-10,2025-12-24,2025-12-15
+35,101,John,Smith,6,Shure MV7 Microphone,microphone,2025-12-11,2026-01-01,2025-12-16
+36,108,Diego,Ramirez,1,Dell Latitude Laptop,laptop,2025-12-17,2025-12-24,2025-12-21
+37,108,Diego,Ramirez,9,BenQ TH685 Projector,projector,2025-12-19,2026-01-02,2025-12-22
+38,106,Tyler,Brooks,6,Shure MV7 Microphone,microphone,2025-12-27,2026-01-03,2026-01-02
+39,103,Joe,Johnson,7,Rode Wireless GO II,microphone,2025-12-29,2026-01-12,2026-01-16
+40,104,Maria,Garcia,7,Rode Wireless GO II,microphone,2026-01-02,2026-01-16,2026-01-13
+41,104,Maria,Garcia,8,Epson PowerLite Projector,projector,2026-01-05,2026-01-12,2026-01-11
+42,107,Nia,Owens,4,Canon EOS R50 Camera,camera,2026-01-09,2026-01-30,2026-01-22
+43,104,Maria,Garcia,3,Lenovo ThinkPad Laptop,laptop,2026-01-17,2026-01-24,2026-01-27
+44,106,Tyler,Brooks,1,Dell Latitude Laptop,laptop,2026-01-21,2026-01-28,2026-01-28
+45,103,Joe,Johnson,2,MacBook Air Laptop,laptop,2026-01-26,2026-02-09,2026-02-13
+46,105,Grace,Pham,4,Canon EOS R50 Camera,camera,2026-01-27,2026-02-10,2026-02-11
+47,108,Diego,Ramirez,7,Rode Wireless GO II,microphone,2026-01-29,2026-02-19,2026-02-15
+48,106,Tyler,Brooks,2,MacBook Air Laptop,laptop,2026-02-03,2026-02-10,2026-02-10
+49,101,John,Smith,6,Shure MV7 Microphone,microphone,2026-02-07,2026-02-28,2026-02-21
+50,105,Grace,Pham,1,Dell Latitude Laptop,laptop,2026-02-09,2026-02-16,2026-02-18
+51,108,Diego,Ramirez,4,Canon EOS R50 Camera,camera,2026-02-15,2026-02-22,2026-02-22
+52,104,Maria,Garcia,3,Lenovo ThinkPad Laptop,laptop,2026-02-18,2026-02-25,2026-02-22
+53,108,Diego,Ramirez,2,MacBook Air Laptop,laptop,2026-02-20,2026-03-13,2026-03-15
+54,106,Tyler,Brooks,2,MacBook Air Laptop,laptop,2026-03-12,2026-03-19,2026-03-18
+55,108,Diego,Ramirez,6,Shure MV7 Microphone,microphone,2026-03-17,2026-03-24,2026-03-20
+56,108,Diego,Ramirez,10,iPad Air Tablet,tablet,2026-03-22,2026-03-29,2026-03-27
+57,104,Maria,Garcia,6,Shure MV7 Microphone,microphone,2026-03-23,2026-04-06,2026-03-31
+58,107,Nia,Owens,4,Canon EOS R50 Camera,camera,2026-03-25,2026-04-01,2026-04-03
+59,107,Nia,Owens,3,Lenovo ThinkPad Laptop,laptop,2026-03-28,2026-04-11,2026-04-14
+60,104,Maria,Garcia,1,Dell Latitude Laptop,laptop,2026-03-29,2026-04-12,2026-04-11
+61,108,Diego,Ramirez,7,Rode Wireless GO II,microphone,2026-04-03,2026-04-10,2026-04-07
+62,102,Jane,Doe,4,Canon EOS R50 Camera,camera,2026-04-14,2026-04-21,2026-04-23
+63,102,Jane,Doe,6,Shure MV7 Microphone,microphone,2026-04-17,2026-05-08,2026-04-30
+64,105,Grace,Pham,1,Dell Latitude Laptop,laptop,2026-04-20,2026-05-04,2026-04-25
+65,101,John,Smith,9,BenQ TH685 Projector,projector,2026-04-20,2026-05-04,2026-05-06
+66,105,Grace,Pham,9,BenQ TH685 Projector,projector,2026-04-20,2026-04-27,2026-04-26
+67,102,Jane,Doe,8,Epson PowerLite Projector,projector,2026-04-23,2026-04-30,2026-04-28
+68,106,Tyler,Brooks,3,Lenovo ThinkPad Laptop,laptop,2026-04-26,2026-05-10,2026-05-03
+69,108,Diego,Ramirez,9,BenQ TH685 Projector,projector,2026-04-27,2026-05-18,2026-05-22
+70,102,Jane,Doe,4,Canon EOS R50 Camera,camera,2026-04-27,2026-05-11,2026-05-09
+71,103,Joe,Johnson,10,iPad Air Tablet,tablet,2026-04-29,2026-05-20,2026-05-19
+72,105,Grace,Pham,6,Shure MV7 Microphone,microphone,2026-05-02,2026-05-16,2026-05-11
+73,105,Grace,Pham,3,Lenovo ThinkPad Laptop,laptop,2026-05-08,2026-05-29,2026-05-27
+74,105,Grace,Pham,9,BenQ TH685 Projector,projector,2026-05-14,2026-05-21,2026-05-23
+75,102,Jane,Doe,10,iPad Air Tablet,tablet,2026-05-19,2026-05-26,2026-05-28
+76,101,John,Smith,10,iPad Air Tablet,tablet,2026-05-21,2026-05-28,2026-06-01
+77,107,Nia,Owens,10,iPad Air Tablet,tablet,2026-05-21,2026-06-11,2026-05-27
+78,108,Diego,Ramirez,2,MacBook Air Laptop,laptop,2026-05-24,2026-05-31,2026-05-28
+79,108,Diego,Ramirez,8,Epson PowerLite Projector,projector,2026-05-29,2026-06-12,2026-06-09
+80,104,Maria,Garcia,9,BenQ TH685 Projector,projector,2026-06-03,2026-06-17,2026-06-10
+81,106,Tyler,Brooks,8,Epson PowerLite Projector,projector,2026-06-10,2026-06-24,2026-06-23
+82,102,Jane,Doe,4,Canon EOS R50 Camera,camera,2026-06-14,2026-06-28,2026-06-17
+83,105,Grace,Pham,3,Lenovo ThinkPad Laptop,laptop,2026-06-16,2026-06-23,2026-06-19
+84,104,Maria,Garcia,3,Lenovo ThinkPad Laptop,laptop,2026-06-17,2026-06-24,2026-06-20
+85,105,Grace,Pham,7,Rode Wireless GO II,microphone,2026-06-28,2026-07-12,2026-07-08
+86,108,Diego,Ramirez,2,MacBook Air Laptop,laptop,2026-06-30,2026-07-14,2026-07-06
+87,105,Grace,Pham,4,Canon EOS R50 Camera,camera,2026-07-02,2026-07-23,2026-07-18
+88,101,John,Smith,8,Epson PowerLite Projector,projector,2026-07-05,2026-07-19,2026-07-13
+89,104,Maria,Garcia,10,iPad Air Tablet,tablet,2026-07-12,2026-07-19,2026-07-23
+90,104,Maria,Garcia,10,iPad Air Tablet,tablet,2026-07-13,2026-08-03,2026-08-03
+91,103,Joe,Johnson,4,Canon EOS R50 Camera,camera,2026-07-17,2026-07-31,2026-07-25
+92,106,Tyler,Brooks,7,Rode Wireless GO II,microphone,2026-07-20,2026-07-27,2026-07-26
+93,104,Maria,Garcia,2,MacBook Air Laptop,laptop,2026-07-20,2026-07-27,2026-07-26
+94,103,Joe,Johnson,2,MacBook Air Laptop,laptop,2026-07-22,2026-08-05,2026-08-06
+95,102,Jane,Doe,8,Epson PowerLite Projector,projector,2026-07-25,2026-08-08,2026-08-01
+96,104,Maria,Garcia,8,Epson PowerLite Projector,projector,2026-07-30,2026-08-06,2026-08-03
+97,104,Maria,Garcia,7,Rode Wireless GO II,microphone,2026-08-01,2026-08-15,2026-08-07
+98,106,Tyler,Brooks,10,iPad Air Tablet,tablet,2026-08-02,2026-08-09,2026-08-06
+99,108,Diego,Ramirez,2,MacBook Air Laptop,laptop,2026-08-06,2026-08-13,2026-08-09
+100,108,Diego,Ramirez,3,Lenovo ThinkPad Laptop,laptop,2026-08-12,2026-08-19,2026-08-17
+101,102,Jane,Doe,4,Canon EOS R50 Camera,camera,2026-08-17,2026-08-24,2026-08-22
+102,105,Grace,Pham,2,MacBook Air Laptop,laptop,2026-08-22,2026-09-12,2026-08-26
+103,103,Joe,Johnson,9,BenQ TH685 Projector,projector,2026-08-24,2026-08-31,2026-08-28
+104,106,Tyler,Brooks,8,Epson PowerLite Projector,projector,2026-08-24,2026-09-07,2026-09-09
+105,106,Tyler,Brooks,8,Epson PowerLite Projector,projector,2026-08-27,2026-09-03,2026-09-04
+106,101,John,Smith,1,Dell Latitude Laptop,laptop,2026-08-28,2026-09-04,2026-09-02
+107,107,Nia,Owens,9,BenQ TH685 Projector,projector,2026-08-29,2026-09-12,2026-09-12
+108,107,Nia,Owens,4,Canon EOS R50 Camera,camera,2026-08-30,2026-09-20,2026-09-07
+109,102,Jane,Doe,10,iPad Air Tablet,tablet,2026-08-30,2026-09-06,2026-09-07
+110,102,Jane,Doe,8,Epson PowerLite Projector,projector,2026-08-30,2026-09-20,2026-09-21
+111,104,Maria,Garcia,10,iPad Air Tablet,tablet,2026-08-30,2026-09-20,2026-09-12
+112,105,Grace,Pham,6,Shure MV7 Microphone,microphone,2026-09-01,2026-09-08,2026-09-06
+113,107,Nia,Owens,3,Lenovo ThinkPad Laptop,laptop,2026-09-02,2026-09-16,2026-09-16
+114,107,Nia,Owens,3,Lenovo ThinkPad Laptop,laptop,2026-09-05,2026-09-19,
+115,103,Joe,Johnson,2,MacBook Air Laptop,laptop,2026-09-05,2026-09-19,
+116,102,Jane,Doe,1,Dell Latitude Laptop,laptop,2026-09-06,2026-09-20,2026-09-10
+117,104,Maria,Garcia,6,Shure MV7 Microphone,microphone,2026-09-06,2026-09-20,
+118,107,Nia,Owens,3,Lenovo ThinkPad Laptop,laptop,2026-09-07,2026-09-28,2026-09-12
+119,107,Nia,Owens,10,iPad Air Tablet,tablet,2026-09-09,2026-09-23,2026-09-15
+120,107,Nia,Owens,1,Dell Latitude Laptop,laptop,2026-09-10,2026-09-17,2026-09-16
