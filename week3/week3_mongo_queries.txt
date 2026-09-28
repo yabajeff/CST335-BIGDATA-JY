@@ -1,0 +1,32 @@
+# Week 3 - Relational vs. Document Modeling in MongoDB
+MongoDB queries (should run in mongosh after the commands file)
+Dr. Heather Wegwerth
+CST 335 100 Data Management & Big Data Systems
+Jeffrey Yabandith
+
+use student_success
+
+// first query. Student summary: profile + advising notes for one student
+db.students.find(
+  { studentId: "S1001" },
+  { _id: 0, studentId: 1, name: 1, email: 1, major: 1, advisingNotes: 1 }
+)
+// expected: Maria Lopez and her 2 advising notes
+
+// second query. Recent support visits: support visits for one student in the last 30 days
+//    (dates are hardcoded, 2026-08-28 to 2026-09-27)
+db.students.aggregate([
+  { $match: { studentId: "S1001" } },
+  { $unwind: "$supportVisits" },
+  { $match: { "supportVisits.date": { $gte: ISODate("2026-08-28"), $lte: ISODate("2026-09-27") } } },
+  { $project: { _id: 0, name: 1, date: "$supportVisits.date", serviceType: "$supportVisits.serviceType", description: "$supportVisits.description" } }
+])
+// expected: Maria's 4 visits from September
+
+
+// third query. High-engagement students: students with 3 or more support visits
+db.students.aggregate([
+  { $match: { $expr: { $gte: [ { $size: "$supportVisits" }, 3 ] } } },
+  { $project: { _id: 0, studentId: 1, name: 1, visitCount: { $size: "$supportVisits" } } }
+])
+// expected: Maria Lopez (4 visits) and James Carter (3 visits)

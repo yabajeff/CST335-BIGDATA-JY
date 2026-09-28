@@ -1,0 +1,78 @@
+# Week 3 - Relational vs. Document Modeling in MongoDB
+Dr. Heather Wegwerth
+CST 335 100 Data Management & Big Data Systems
+Jeffrey Yabandith
+
+use student_success
+
+db.students.insertMany([
+  {
+    studentId: "S1001",
+    name: "Maria Lopez",
+    email: "mlopez@csp.edu",
+    major: "Sonography",
+    advisingNotes: [
+      { date: ISODate("2026-08-28"), advisor: "Dr. Smith", category: "academic plan", text: "Reviewed fall schedule and prerequisites." },
+      { date: ISODate("2026-09-15"), advisor: "Dr. Smith", category: "well-being", text: "Feeling stressed about clinicals. Referred to counseling." }
+    ],
+    supportVisits: [
+      { date: ISODate("2026-09-03"), serviceType: "tutoring", description: "Anatomy tutoring session" },
+      { date: ISODate("2026-09-10"), serviceType: "tutoring", description: "Anatomy exam review" },
+      { date: ISODate("2026-09-17"), serviceType: "writing center", description: "Care plan paper feedback" },
+      { date: ISODate("2026-09-22"), serviceType: "workshop", description: "Time management workshop" }
+    ]
+  },
+  {
+    studentId: "S1002",
+    name: "James Carter",
+    email: "jcarter@csp.edu",
+    major: "Computer Science",
+    advisingNotes: [
+      { date: ISODate("2026-08-30"), advisor: "Prof. Lee", category: "academic plan", text: "Discussed plan to graduate next spring." },
+      { date: ISODate("2026-09-18"), advisor: "Prof. Lee", category: "career", text: "Talked about internship applications." }
+    ],
+    supportVisits: [
+      { date: ISODate("2026-09-05"), serviceType: "tutoring", description: "Data structures help" },
+      { date: ISODate("2026-09-12"), serviceType: "workshop", description: "Resume workshop" },
+      { date: ISODate("2026-09-19"), serviceType: "tutoring", description: "SQL practice" }
+    ]
+  },
+  {
+    studentId: "S1003",
+    name: "Aisha Khan",
+    email: "akhan@csp.edu",
+    major: "Business",
+    advisingNotes: [
+      { date: ISODate("2026-09-02"), advisor: "Dr. Smith", category: "academic plan", text: "Added a marketing minor." }
+    ],
+    supportVisits: [
+      { date: ISODate("2026-07-20"), serviceType: "writing center", description: "Summer case study paper" }
+    ]
+  },
+  {
+    studentId: "S1004",
+    name: "Tom Nguyen",
+    email: "tnguyen@csp.edu",
+    major: "Psychology",
+    advisingNotes: [
+      { date: ISODate("2026-09-08"), advisor: "Prof. Lee", category: "well-being", text: "Adjusting to working and school at the same time." }
+    ],
+    supportVisits: [
+      { date: ISODate("2026-09-09"), serviceType: "writing center", description: "APA formatting help" },
+      { date: ISODate("2026-09-20"), serviceType: "tutoring", description: "Statistics tutoring" }
+    ]
+  },
+  {
+    studentId: "S1005",
+    name: "Emily Brooks",
+    email: "ebrooks@csp.edu",
+    major: "Education",
+    advisingNotes: [
+      { date: ISODate("2026-09-11"), advisor: "Dr. Smith", category: "academic plan", text: "Planned student teaching semester." }
+    ],
+    supportVisits: []
+  }
+])
+
+// check the inserts
+db.students.countDocuments()
