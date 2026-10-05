@@ -1,0 +1,10 @@
+# CST 335 Week 4 - Distributed Storage and Data Lake Simulation
+# integrity & reliability reflection
+
+Dr. Heather Wegwerth
+CST 335 100 Data Management & Big Data Systems
+Jeffrey Yabandith
+
+Replication is what was protecting the data when node2 ultimately failed. Since each of the blocks was stored on two nodes, losing node2 only removed a single copy of the block1 and block2. The other copies on node1 and node3 were still there, so all 30 of the loan records could still be read and used as intended. The failure showed that the cluster will be at risk until it is repaired, because those two blocks only had one copy left. Copying them to a replacement node brought the replication factor back to 2 full cirlce. 
+Partitioning is helping with the speed and with the accuracy. Since the lake itself is organized by the year and month, a query for one month only has to read that month's folder and then can skip the rest. On my desktop the difference is too small to notice, but on a real data lake with years of files it would ultimately save a lot of scanning in the long run. It will also lower the chance of mixing in the wrong kind of data, because old or unrelated months are in separate folders by themselves and are not touched unless the query specifically asks for them.
+If this were to be a real university data lake, it would need more than just folders and copies. Files should be properly validated when they are loaded up, for example checking for any missing values, duplicate loan IDs, and dates that don't match the partition folder. There should also be rules for who can read or manage the data, a consistent naming policy for the folders and files, and monitoring that will automatically detect a failed node and will then re-replicate its blocks instead of relying on someone to copy files manually.

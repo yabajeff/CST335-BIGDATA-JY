@@ -1,0 +1,11 @@
+loan_id,loan_date,campus,item_category
+21,2025-02-03,StPaul,camera
+22,2025-02-04,StPaul,laptop
+23,2025-02-06,Online,laptop
+24,2025-02-10,StPaul,projector
+25,2025-02-12,Online,camera
+26,2025-02-14,StPaul,laptop
+27,2025-02-18,StPaul,camera
+28,2025-02-20,Online,laptop
+29,2025-02-24,StPaul,projector
+30,2025-02-26,StPaul,laptop
