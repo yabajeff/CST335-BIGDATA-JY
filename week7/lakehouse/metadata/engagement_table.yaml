@@ -1,0 +1,63 @@
+# simulated lakehouse table spec for the engagement table (version 1)
+#--- Dr. Heather Wegwerth
+#--- CST 335 100 Data Management & Big Data Systems
+#--- Jeffrey Yabandith
+
+table_name: engagement
+version: 1
+created: 2024-09-01
+location: lakehouse/engagement/
+file_format: csv
+
+schema:
+  - name: event_id
+    type: INTEGER
+    required: true
+  - name: student_id
+    type: VARCHAR
+    required: true
+  - name: event_type
+    type: VARCHAR
+    required: true
+  - name: event_date
+    type: DATE
+    required: true
+  - name: duration_minutes
+    type: INTEGER
+    required: true
+  - name: campus
+    type: VARCHAR
+    required: true
+
+partition_keys:
+  - name: year
+    type: INTEGER
+    source: event_date
+  - name: month
+    type: INTEGER
+    source: event_date
+  # the folder layout is: year=YYYY/month=MM/
+
+enforcement_rules:
+  required_columns: [event_id, student_id, event_type, event_date, duration_minutes, campus]
+  allowed_types: [INTEGER, VARCHAR, DATE]
+  allowed_values:
+    event_type: [workshop, tutoring, LMS-log]
+    campus: [St. Paul, Online]
+  checks:
+    - event_id must be unique
+    - duration_minutes must be greater than 0
+    - event_date must fall inside the year/month of its partition folder
+  on_violation: reject the file (do not write it to the table)
+
+the schema_evolution:
+  - the new columns may be added only as optional (nullable) columns.
+  - any existing columns cannot be changed or removed.
+  - each of the schema change increments the version number and then gets a new metadata file.
+  - the files are already written are not rewritten. the older files read the new column as NULL.
+
+files:
+  - path: year=2024/month=09/engagement_2024_09.csv
+    rows: 15
+  - path: year=2024/month=10/engagement_2024_10.csv
+    rows: 15
